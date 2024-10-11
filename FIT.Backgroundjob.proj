@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>An opinionated F# Background job template</Description>
-    <Authors>Rico Saupe</Authors>
+    <Authors>Functional IT</Authors>
     <Copyright>Copyright (c) 2024 Functional IT</Copyright>
     <PackageId>FIT.BackgroundJob</PackageId>
     <PackageVersion>0.0.1</PackageVersion>

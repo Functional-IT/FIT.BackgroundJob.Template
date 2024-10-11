@@ -6,6 +6,8 @@ open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
 open Serilog
 open Microsoft.Extensions.Logging
+open BackgroundJob
+open Models
 
 let (!) f = f |> ignore
 
@@ -13,11 +15,12 @@ let (!) f = f |> ignore
 let main argv =
 
     let configureServices (hCtx: HostBuilderContext) (services: IServiceCollection) =
+        let appS = hCtx.Configuration.GetSection("AppSettings").Get<Appsettings>()
+        ! services.AddSingleton(appS)
+
         let log =
             LoggerConfiguration().ReadFrom.Configuration(hCtx.Configuration).CreateLogger()
 
-        // let appS = hCtx.Configuration.GetSection("AppSettings").Get<AppSettings>()
-        // ! services.AddSingleton(appS)
 
         !services.AddLogging(fun cfg -> !cfg.ClearProviders().AddSerilog(log))
 

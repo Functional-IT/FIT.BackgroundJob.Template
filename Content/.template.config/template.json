@@ -3,10 +3,9 @@
     "author": "Functional IT",
     "classifications": [
         "Windows Service",
-        "Background Job",
-        "scaffold"
+        "Background Job"
     ],
-    "name": "FIT Background Job v0.0.1",
+    "name": "FIT Background Job",
     "tags": {
         "language": "F#",
         "type": "project"
@@ -16,16 +15,82 @@
     "sourceName": "FIT.BackgroundJob",
     "sources": [
         {
-            "modifiers": [
+            "source": "./default"
+        }
+    ],
+    "SpecialCustomOperations": {
+        "**/paket.*": {
+            "operations": [
                 {
-                    "exclude": [
-                        "**/[Bb]in/**",
-                        "**/[Oo]bj/**",
-                        ".template.config/**/*",
-                        "**/paket-files/**"
-                    ]
+                    "type": "conditional",
+                    "configuration": {
+                        "if": [
+                            "#if"
+                        ],
+                        "else": [
+                            "#else"
+                        ],
+                        "elseif": [
+                            "#elseif"
+                        ],
+                        "endif": [
+                            "#endif"
+                        ],
+                        "trim": "true",
+                        "wholeLine": "true"
+                    }
+                }
+            ]
+        },
+        "**/*.fsproj": {
+            "operations": [
+                {
+                    "type": "conditional",
+                    "configuration": {
+                        "if": [
+                            "<!--#if"
+                        ],
+                        "else": [
+                            "<!--#else",
+                            "#else-->"
+                        ],
+                        "endif": [
+                            "<!--#endif",
+                            "#endif-->"
+                        ],
+                        "trim": "true",
+                        "wholeLine": "true"
+                    }
+                }
+            ]
+        },
+        "**/*.fs": {
+            "operations": [
+                {
+                    "type": "conditional",
+                    "configuration": {
+                        "if": [
+                            "#if",
+                            "//#if",
+                            "(*#if"
+                        ],
+                        "else": [
+                            "#else",
+                            "//#else",
+                            "(*#else",
+                            "#else*)"
+                        ],
+                        "endif": [
+                            "#endif",
+                            "//#endif",
+                            "(*#endif",
+                            "#endif*)"
+                        ],
+                        "trim": "true",
+                        "wholeLine": "true"
+                    }
                 }
             ]
         }
-    ]
+    }
 }
