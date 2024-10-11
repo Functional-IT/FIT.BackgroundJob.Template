@@ -1,0 +1,11 @@
+framework: net8.0
+storage: none
+source https://api.nuget.org/v3/index.json
+
+nuget Polly
+nuget System.Net.Http
+
+nuget Fake.Core.ReleaseNotes
+nuget Fake.Core.Target
+nuget Fake.DotNet.Paket
+nuget Fake.Tools.Git

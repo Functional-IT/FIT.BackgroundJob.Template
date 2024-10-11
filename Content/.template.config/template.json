@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Functional IT",
+    "classifications": [
+        "azurefunction",
+        "scaffold"
+    ],
+    "name": "FIT Azure Function Scaffold",
+    "tags": {
+        "language": "F#",
+        "type": "project"
+    },
+    "identity": "FIT.AzureFunction",
+    "shortName": "fit-azurefunction",
+    "sourceName": "FIT.AzureFunction",
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "exclude": [
+                        "**/[Bb]in/**",
+                        "**/[Oo]bj/**",
+                        ".template.config/**/*",
+                        "**/paket-files/**"
+                    ]
+                }
+            ]
+        }
+    ]
+}

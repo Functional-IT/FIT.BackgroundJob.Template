@@ -1,0 +1,14 @@
+.fake/
+packages/
+paket-files/
+nupkg/
+obj/
+bin/
+gen-paket-lock-files/
+/.vs
+.ionide/
+.idea/
+.fake
+.ionide
+.idea
+TestResults.xml
