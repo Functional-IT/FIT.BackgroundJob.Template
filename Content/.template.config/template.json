@@ -6,14 +6,14 @@
         "Background Job",
         "scaffold"
     ],
-    "name": "FIT Background Job v",
+    "name": "FIT Background Job v0.0.1",
     "tags": {
         "language": "F#",
         "type": "project"
     },
     "identity": "FIT.BackgroundJob",
-    "shortName": "fit-BackgroundJobn",
-    "sourceName": "FIT.BackgroundJobn",
+    "shortName": "fit-BackgroundJob",
+    "sourceName": "FIT.BackgroundJob",
     "sources": [
         {
             "modifiers": [
