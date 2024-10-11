@@ -30,18 +30,16 @@
   </PropertyGroup>
   <PropertyGroup>
     <ExcludeFromPackage>
-            Content/.fake/**/*;
-            Content/.ionide/**/*;
-            Content/.cache/**/*;
-            Content/.fable/**/*;
-            Content/node_modules/**/*;
-            Content/**/obj/**/*;
-            Content/**/bin/**/*;
-            Content/**/tests/**/obj/**/*;
-            Content/**/tests/**/bin/**/*;
-            Content/**/deployment/**/*;
-            Content/packages/**/*;
-            Content/paket-files/**/*;
+            Content/default/.fake/**/*;
+            Content/default/.ionide/**/*;
+            Content/default/.cache/**/*;
+            Content/default/.fable/**/*;
+            Content/default/**/obj/**/*;
+            Content/default/**/bin/**/*;
+            Content/default/**/tests/**/obj/**/*;
+            Content/default/**/tests/**/bin/**/*;
+            Content/default/**/deployment/**/*;
+            Content/default/paket-files/**/*;
         </ExcludeFromPackage>
   </PropertyGroup>
   <ItemGroup>
@@ -50,7 +48,7 @@
     <None Include="RELEASE-NOTES.txt" Pack="true" PackagePath="./" />
     <None Include="README.md" Pack="true" PackagePath="./" />
     <Content Include="Content/**/*.*" Exclude="$(ExcludeFromPackage)">
-      <PackagePath>Content\</PackagePath>
+      <PackagePath>Content\default\</PackagePath>
     </Content>
   </ItemGroup>
   <Import Project=".paket\Paket.Restore.targets" />

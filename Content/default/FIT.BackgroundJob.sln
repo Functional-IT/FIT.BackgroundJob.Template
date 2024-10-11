@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{398C26
 		paket.dependencies = paket.dependencies
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FIT.AzureFunc", "src\FIT.AzureFunc\FIT.AzureFunc.fsproj", "{B63D13FE-48B7-4A8B-8741-7CC3B16E2235}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FIT.BackgroundJob", "src\FIT.BackgroundJob\FIT.BackgroundJob.fsproj", "{B63D13FE-48B7-4A8B-8741-7CC3B16E2235}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

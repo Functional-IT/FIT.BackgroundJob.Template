@@ -2,17 +2,18 @@
     "$schema": "http://json.schemastore.org/template",
     "author": "Functional IT",
     "classifications": [
-        "azurefunction",
+        "Windows Service",
+        "Background Job",
         "scaffold"
     ],
-    "name": "FIT Azure Function Scaffold",
+    "name": "FIT Background Job",
     "tags": {
         "language": "F#",
         "type": "project"
     },
-    "identity": "FIT.AzureFunction",
-    "shortName": "fit-azurefunction",
-    "sourceName": "FIT.AzureFunction",
+    "identity": "FIT.BackgroundJob",
+    "shortName": "fit-BackgroundJobn",
+    "sourceName": "FIT.BackgroundJobn",
     "sources": [
         {
             "modifiers": [
