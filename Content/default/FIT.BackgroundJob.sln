@@ -3,25 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{398C2642-5389-4231-AFA8-875E81E2D630}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{D7B901EB-427A-4119-8F08-4D9C8DA070AD}"
 	ProjectSection(SolutionItems) = preProject
 		paket.dependencies = paket.dependencies
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FIT.BackgroundJob", "src\FIT.BackgroundJob\FIT.BackgroundJob.fsproj", "{B63D13FE-48B7-4A8B-8741-7CC3B16E2235}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fit.BackgroundJob", "Fit.BackgroundJob.fsproj", "{BF9ADB9A-DCEE-46BD-B24B-39F28C929EEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CCCF82D-CD91-4DBD-9A6D-B5BE05AA13EF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.fantomasignore = .fantomasignore
+		.gitignore = .gitignore
+		paket.dependencies = paket.dependencies
+		paket.references = paket.references
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF9ADB9A-DCEE-46BD-B24B-39F28C929EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9ADB9A-DCEE-46BD-B24B-39F28C929EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9ADB9A-DCEE-46BD-B24B-39F28C929EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9ADB9A-DCEE-46BD-B24B-39F28C929EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B63D13FE-48B7-4A8B-8741-7CC3B16E2235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B63D13FE-48B7-4A8B-8741-7CC3B16E2235}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B63D13FE-48B7-4A8B-8741-7CC3B16E2235}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B63D13FE-48B7-4A8B-8741-7CC3B16E2235}.Release|Any CPU.Build.0 = Release|Any CPU
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09E12277-24C1-4296-B424-53B468B6C18D}
 	EndGlobalSection
 EndGlobal

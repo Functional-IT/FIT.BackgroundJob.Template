@@ -1,11 +1,16 @@
-source https://www.nuget.org/api/v2
+source https://api.nuget.org/v3/index.json
+framework: net8.0
+storage: none
 
-nuget FSharp.Core 8.0.101
-nuget FSToolkit.ErrorHandling
-nuget Microsoft.ApplicationInsights.WorkerService 2.21.0
-nuget Microsoft.Azure.Functions.Worker 1.20.1
-nuget Microsoft.Azure.Functions.Worker.ApplicationInsights 1.1.0
-nuget Microsoft.Azure.Functions.Worker.Extensions.Http 3.1.0
-nuget Microsoft.Azure.Functions.Worker.Extensions.Timer 4.3.0
-nuget Microsoft.Azure.Functions.Worker.Sdk 1.16.4
-nuget Microsoft.Azure.WebJobs.Extensions.Storage 5.2.2
+
+nuget FSharp.Core
+nuget Microsoft.Extensions.Configuration
+nuget Microsoft.Extensions.DependencyInjection
+nuget Microsoft.Extensions.Hosting
+nuget Microsoft.Extensions.Hosting.WindowsServices
+nuget Serilog
+nuget Serilog.Extensions.Hosting
+nuget Serilog.Settings.Configuration
+nuget Serilog.Sinks.Console
+nuget Serilog.Sinks.File
+
