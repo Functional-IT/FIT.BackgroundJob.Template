@@ -7,7 +7,6 @@ An opinionated F# Windows Background job Template
 * **global.json** pinned to .NET 8
 * **VS Code** settings to hide inlay hints by default
 * **.gitignore** with common F# settings
-* **src/FIT.Background** folder structure
 
 ### Pre-installed dotnet tools
 
@@ -16,38 +15,10 @@ An opinionated F# Windows Background job Template
   * FSharp.Core
   * FSToolkit.ErrorHandling
 
-## To execute the template
-
-```bash
-dotnet new fit-backgroundjob -o MyBackgroundjob
-```
-
-will give you a folder structure as follows:
-
-```
-.config
-    dotnet-tools.json
-.paket
-    Paket.Restore.targets
-.vscode
-    settings.json
-src
-    FIT.BackgroundJob
-        FIT.BackgroundJob.fsproj
-        paket.references
-
-        Readme.md
-FIT.BackgroundJob.sln
-.editorconfig
-.gitignore
-global.json
-paket.dependencies
-paket.lock
-```
+To run the application
 
 ```bash
 dotnet tool restore
-cd src/FIT.BackgroundJob
 dotnet run
 # or use visual studio, visual studio code or Rider
 ```
@@ -55,14 +26,12 @@ dotnet run
 ### Adding a package
 
 ```bash
-cd src/FIT.BackgroundJob
 dotnet paket add <package name>
 ```
 
 ### Removing a package
 
 ```bash
-cd src/FIT.BackgroundJob
 dotnet paket remove <package name>
 ```
 

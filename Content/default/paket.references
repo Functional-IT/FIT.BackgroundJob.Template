@@ -8,3 +8,4 @@ Serilog.Settings.Configuration
 Serilog.Sinks.Console
 Serilog.Sinks.File
 FSharp.Core
+FSToolkit.ErrorHandling

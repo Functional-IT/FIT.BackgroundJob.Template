@@ -1,4 +1,4 @@
-module InventoryService.Program
+module BackgroundJob.Program
 
 open BackgroundJob.Services
 open Microsoft.Extensions.Configuration

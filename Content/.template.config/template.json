@@ -5,13 +5,13 @@
         "Windows Service",
         "Background Job"
     ],
-    "name": "FIT Background Job",
+    "name": "FIT Background Job v0.0.1",
     "tags": {
         "language": "F#",
         "type": "project"
     },
     "identity": "FIT.BackgroundJob",
-    "shortName": "fit-BackgroundJob",
+    "shortName": "FIT.Backgroundjob",
     "sourceName": "FIT.BackgroundJob",
     "sources": [
         {

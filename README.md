@@ -19,7 +19,7 @@ An opinionated F# Windows Background job Template
 ## To execute the template
 
 ```bash
-dotnet new fit-backgroundjob -o MyBackgroundjob
+dotnet new FIT.Backgroundjob -o MyBackgroundjob
 ```
 
 will give you a folder structure as follows:
@@ -31,18 +31,22 @@ will give you a folder structure as follows:
     Paket.Restore.targets
 .vscode
     settings.json
-src
-    FIT.BackgroundJob
-        FIT.BackgroundJob.fsproj
-        paket.references
-
-        Readme.md
+FIT.BackgroundJob.fsproj
+Model.fs
+BackgroundJob.fs
+Program.fs
+Readme.md
 FIT.BackgroundJob.sln
 .editorconfig
 .gitignore
+.gitattributes
+.fantomasignore
+appsettings.json
 global.json
 paket.dependencies
+paket.references
 paket.lock
+
 ```
 
 ```bash

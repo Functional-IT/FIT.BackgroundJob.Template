@@ -13,4 +13,4 @@ nuget Serilog.Extensions.Hosting
 nuget Serilog.Settings.Configuration
 nuget Serilog.Sinks.Console
 nuget Serilog.Sinks.File
-
+nuget FSToolkit.ErrorHandling
