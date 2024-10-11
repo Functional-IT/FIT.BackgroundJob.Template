@@ -3,6 +3,8 @@ RESTRICTION: == net8.0
 NUGET
   remote: https://api.nuget.org/v3/index.json
     FSharp.Core (8.0.401)
+    FSToolkit.ErrorHandling (4.17)
+      FSharp.Core (>= 7.0.300)
     Microsoft.Extensions.Configuration (8.0)
       Microsoft.Extensions.Configuration.Abstractions (>= 8.0)
       Microsoft.Extensions.Primitives (>= 8.0)
