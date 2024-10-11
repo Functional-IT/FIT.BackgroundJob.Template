@@ -4,11 +4,12 @@ open Fake.Core
 open Fake.DotNet
 open Fake.IO
 open Fake.Tools
+open Fake.Core
 
 let execContext = Context.FakeExecutionContext.Create false "build.fsx" []
 Context.setExecutionContext (Context.RuntimeContext.Fake execContext)
 
-let skipTests = Environment.hasEnvironVar "yolo"
+let skipTests = true // Environment.hasEnvironVar "yolo"
 let release = ReleaseNotes.load "RELEASE_NOTES.md"
 
 let templatePath = "./Content/.template.config/template.json"
@@ -82,10 +83,14 @@ let psi exe arg dir (x: ProcStartInfo) : ProcStartInfo =
         WorkingDirectory = dir }
 
 let run exe arg dir =
-    let result = Process.execWithResult (psi exe arg dir) TimeSpan.MaxValue
+    let result =
+        CreateProcess.fromRawCommandLine exe arg
+        |> CreateProcess.withWorkingDirectory dir
+        |> CreateProcess.withTimeout System.TimeSpan.MaxValue
+        |> Proc.run
 
-    if not result.OK then
-        (failwithf "`%s %s` failed: %A" exe arg result.Errors)
+    if result.ExitCode <> 0 then
+        (failwithf "`%s %s` failed: %A" exe arg result.ExitCode)
 
 Target.create "TemplateExecutionTests" (fun _ ->
     let cmd = "run"

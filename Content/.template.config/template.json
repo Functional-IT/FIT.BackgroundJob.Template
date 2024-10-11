@@ -1,4 +1,4 @@
-{
+﻿{
     "$schema": "http://json.schemastore.org/template",
     "author": "Functional IT",
     "classifications": [
@@ -6,7 +6,7 @@
         "Background Job",
         "scaffold"
     ],
-    "name": "FIT Background Job",
+    "name": "FIT Background Job v",
     "tags": {
         "language": "F#",
         "type": "project"
