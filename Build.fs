@@ -20,7 +20,7 @@ let version = Environment.environVarOrDefault "VERSION" "0.0.1"
 let nupkgDir = Path.getFullName "./nupkg"
 
 let nupkgPath =
-    System.IO.Path.Combine(nupkgDir, $"FIT.BackgroundJob.%s{version}.nupkg")
+    System.IO.Path.Combine(nupkgDir, $"BackgroundJob.Template.%s{version}.nupkg")
 
 let result =
     DotNet.exec (fun x -> { x with DotNetCliPath = "dotnet" }) "tool" "restore"
@@ -64,7 +64,7 @@ Target.create "Pack" (fun _ ->
         templateProj)
 
 Target.create "Install" (fun _ ->
-    let unInstallArgs = $"uninstall FIT.BackgroundJob"
+    let unInstallArgs = $"uninstall BackgroundJob.Template"
 
     DotNet.exec (fun x -> { x with DotNetCliPath = "dotnet" }) "new" unInstallArgs
     |> ignore // Allow this to fail as the template might not be installed

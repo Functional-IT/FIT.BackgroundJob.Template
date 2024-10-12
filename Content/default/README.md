@@ -1,4 +1,4 @@
-# FIT F# Background Job
+# F# Background Job Template
 
 An opinionated F# Windows Background job Template
 
