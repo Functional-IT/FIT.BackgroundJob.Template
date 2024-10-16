@@ -3,6 +3,8 @@ module BackgroundJob.Program
 open BackgroundJob.Services
 open Microsoft.Extensions.Configuration
 open Microsoft.Extensions.DependencyInjection
+open Microsoft.Extensions.Logging.Configuration
+open Microsoft.Extensions.Logging.EventLog
 open Microsoft.Extensions.Hosting
 open Serilog
 open Microsoft.Extensions.Logging
@@ -10,6 +12,9 @@ open BackgroundJob
 open Models
 
 let (!) f = f |> ignore
+
+//TODO
+//
 
 [<EntryPoint>]
 let main argv =
@@ -25,6 +30,8 @@ let main argv =
         !services.AddLogging(fun cfg -> !cfg.ClearProviders().AddSerilog(log))
 
         ! services.AddSingleton<Serilog.ILogger>(log)
+        LoggerProviderOptions.RegisterProviderOptions<EventLogSettings, EventLogLoggerProvider>(services)
+        !services.AddWindowsService(fun o -> o.ServiceName <- "FIT Background job")
         ! services.AddHostedService<BackgroundJob>()
 
     let configureAppConfig (hCtx: HostBuilderContext) (cfgBuilder: IConfigurationBuilder) =

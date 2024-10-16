@@ -18,6 +18,15 @@
             "source": "./default"
         }
     ],
+    "symbols": {
+        "ServiceName": {
+            "type": "parameter",
+            "dataType": "string",
+            "description": "Renames files containing 'BackgroundJob'",
+            "FileRename": "BackgroundJob",
+            "defaultValue": "RenamedBackgroundJob"
+        }
+    },
     "SpecialCustomOperations": {
         "**/paket.*": {
             "operations": [

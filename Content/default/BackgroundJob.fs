@@ -17,10 +17,10 @@ type BackgroundJob(_logger: Serilog.ILogger, settings: Appsettings) =
         while not stoppingToken.IsCancellationRequested do
             try
                 //TODO: Implement the logic here
-                _logger.Information "Working away."
+                let date = System.DateTime.Now
+                _logger.Information $"Working away. {date}"
 
             with e ->
-                // logMessage ("Inventory Service unable to ....", e)
                 // wait additional time since we know something is going wrong
                 do! Task.Delay(5 * 1000 * 5)
 
