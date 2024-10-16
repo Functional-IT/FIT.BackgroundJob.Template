@@ -16,7 +16,7 @@ let templatePath = "./Content/.template.config/template.json"
 let defaultTemplatePath = "./Content/default"
 let templateProj = "FIT.BackgroundJob.proj"
 let templateName = "FIT Background Job"
-let version = Environment.environVarOrDefault "VERSION" "0.0.1"
+let version = Environment.environVarOrDefault "VERSION" "0.0.2"
 let nupkgDir = Path.getFullName "./nupkg"
 
 let nupkgPath =
