@@ -5,7 +5,7 @@
         "Windows Service",
         "Background Job"
     ],
-    "name": "FIT Background Job v0.0.1",
+    "name": "FIT Background Job v0.0.2",
     "tags": {
         "language": "F#",
         "type": "project"
